@@ -51,7 +51,7 @@ RSpec.shared_examples "IE basic specs" do
 
   it 'must validate correctly valid IE numbers' do
     @valid_numbers.each do |number|
-      expect(described_class.valid?(number)).to be_truthy
+      expect(described_class.valid?(number)).to be_truthy, number
       expect(described_class.new(number)).to be_valid
     end
   end

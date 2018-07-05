@@ -10,6 +10,7 @@ describe BRDocuments::IE::MT do
     }
 
     @valid_numbers = %w(
+      00130000019
       13.000.001-9
       13000001-9
       130000019
