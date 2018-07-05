@@ -10,8 +10,9 @@ module BRDocuments
 
     set_fixed_digits [1, 3]
 
-    def self.valid_fixed_digits?(number)
-      super(number) || super(number.gsub(/^00/, ''))
+    def initialize(number)
+      number = number.gsub(/^00/, '') if number.is_a?(String)
+      super(number)
     end
   end
 end
